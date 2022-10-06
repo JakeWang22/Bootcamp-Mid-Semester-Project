@@ -35,50 +35,45 @@ const defense = document.getElementById("defense");
 const specialAttack = document.getElementById("special-attack");
 const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
+const img = document.getElementById("sprite");
 const buttonNext = document.getElementById("next");
-let index = 1;
+let index = 0;
 buttonNext.addEventListener("click", () => {
-    if (index!=0)
+    index++;
+    if (index!=-1)
     fetch(`https://pokeapi.co/api/v2/pokemon/${index}`)
         .then((response) => response.json())
         .then((data) => {
             name.textContent = data.name;
-            height.textContent = "height: " + data.height;
-            weight.textContent = "weight: " + data.weight;
+            height.textContent = "height: " + data.height / 10 + "m";
+            weight.textContent = "weight: " + data.weight / 10 + "kg";
             hp.textContent = "hp: " + data.stats[0].base_stat;
             attack.textContent = "attack: " + data.stats[1].base_stat;
             defense.textContent = "defense: " + data.stats[2].base_stat;
             specialAttack.textContent = "special-attack: " + data.stats[3].base_stat;
             specialDefense.textContent = "special-defense: " + data.stats[4].base_stat;
             speed.textContent = "speed: " + data.stats[5].base_stat;
+            sprite.src=data.sprites.front_default;
         });
-    index++;
+        
 });
 const buttonPrev = document.getElementById("prev");
 buttonPrev.addEventListener("click", () => {
-    if (index!=0)
+    if (index > 1)
+    index--;
+    if (index!=-1)
     fetch(`https://pokeapi.co/api/v2/pokemon/${index}`)
         .then((response) => response.json())
         .then((data) => {
             name.textContent = data.name;
-            height.textContent = "height: " + data.height;
-            weight.textContent = "weight: " + data.weight;
-            hp.textContent = "hp: " + data.hp;
-            attack.textContent = "attack: " + data.attack;
-            defense.textContent = "defense: " + data.defense;
-            specialAttack.textContent = "special-attack: " + data.specialAttack;
-            specialDefense.textContent = "special-defense: " + data.specialDefense;
+            height.textContent = "height: " + data.height / 10 + "m";
+            weight.textContent = "weight: " + data.weight / 10 + "kg";
+            hp.textContent = "hp: " + data.stats[0].base_stat;
+            attack.textContent = "attack: " + data.stats[1].base_stat;
+            defense.textContent = "defense: " + data.stats[2].base_stat;
+            specialAttack.textContent = "special-attack: " + data.stats[3].base_stat;
+            specialDefense.textContent = "special-defense: " + data.stats[4].base_stat;
+            speed.textContent = "speed: " + data.stats[5].base_stat;
+            sprite.src=data.sprites.front_default;
         });
-    index--;
 });
-const order = fetch("https://pokeapi.co/api/v2/pokemon/1")
-    .then((response) => response.json())
-    .then((data) => console.log(data.order));
-
-const types = fetch("https://pokeapi.co/api/v2/pokemon/1")
-    .then((response) => response.json())
-    .then((data) => console.log(data.types));
-
-const sprite = fetch("https://pokeapi.co/api/v2/pokemon/1")
-    .then((response) => response.json())
-    .then((data) => console.log(data.sprites.front_default));

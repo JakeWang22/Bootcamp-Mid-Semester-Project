@@ -1,0 +1,51 @@
+img {
+    
+    border: 2px solid rgb(0, 0, 0);
+  }
+.stats {
+   display: flex;
+   justify-content: space-evenly;
+   font: bold;
+}
+p {
+    font: bolder;
+    font-size: 20px;
+    margin-bottom: -15px;
+}
+.rect {
+    width: 150px;
+    height: 80px;
+    background-color: rgb(218, 216, 216);
+}
+.name {
+    display: flex;
+    border: 1px solid rgb(80, 80, 80);
+    background-color: rgb(218, 216, 216) ;
+    justify-content: center;
+}
+.button {
+    border: none;
+    background-color: rgb(218, 216, 216) ;
+    font-size: 40px;
+    font-weight: 10px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
