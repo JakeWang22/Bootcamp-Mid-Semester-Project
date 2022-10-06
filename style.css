@@ -5,11 +5,12 @@ img {
     width: 250px;
   }
 .stats {
-   display: flex;
-   justify-content: space-evenly;
-   font: bold;
-   margin-left: 10px;
-}
+    flex-direction: column;
+    font: 10px;
+    font-size: 20px;
+    margin-left: 30px;
+    line-height: 40%;
+ }
 p {
     font: bolder;
     font-size: 20px;
