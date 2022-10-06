@@ -1,33 +1,35 @@
 img {
     
     border: 2px solid rgb(0, 0, 0);
+    height: 250px;
+    width: 250px;
   }
 .stats {
    display: flex;
    justify-content: space-evenly;
    font: bold;
+   margin-left: 10px;
 }
 p {
     font: bolder;
     font-size: 20px;
-    margin-bottom: -15px;
-}
-.rect {
-    width: 150px;
-    height: 80px;
-    background-color: rgb(218, 216, 216);
+    line-height: 40%;
 }
 .name {
     display: flex;
     border: 1px solid rgb(80, 80, 80);
     background-color: rgb(218, 216, 216) ;
     justify-content: center;
+    line-height: 150%;
+    border-radius: 10px;
 }
 .button {
     border: none;
     background-color: rgb(218, 216, 216) ;
     font-size: 40px;
     font-weight: 10px;
+    border-radius: 10px;
+    width: 100px;
 }
 .left {
     display: flex;
@@ -48,4 +50,9 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+span {
+    background-color: rgb(218, 216, 216);
+    width: 300px;
+    height: 350px;
 }
