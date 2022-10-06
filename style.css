@@ -32,6 +32,15 @@ p {
     border-radius: 10px;
     width: 100px;
 }
+.page {
+    border: none;
+    background-color: rgb(218, 216, 216) ;
+    font-size: 23px;
+    font-weight: 5;
+    height: 50px;
+    border-radius: 10px;
+    width: 100px;
+}
 .left {
     display: flex;
     flex-direction: column;
@@ -48,6 +57,12 @@ p {
     justify-content: space-evenly;
 }
 .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.btn1 {
+    margin-top: 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

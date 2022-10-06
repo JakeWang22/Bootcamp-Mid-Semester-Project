@@ -1,31 +1,4 @@
 
-/*
-let next = document.getElementById("next");
-let index = 0;
-next.addEventListener("click", () => {
-    counter++;
-})
-
-let print = document.getElementById("print");
-print.addEventListener("click", () => {
-    console.log(counter);
-});
-*/
-/*const redText = document.getElementById("to-have-red-text");
-
-redText.style.color = "red";
-
-redText.addEventListener("click", (e) => {
-  redText.textContent = "Bog";
-});
-
-
-
-const button = document.getElementById("next");
-button.addEventListener("click", function handleClick() { 
-    button.textContent = "Button Clicked";
-})
-*/
 const name = document.getElementById("name");
 const height = document.getElementById("height");
 const weight = document.getElementById("weight");
@@ -37,6 +10,9 @@ const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
 const img = document.getElementById("sprite");
 const buttonNext = document.getElementById("next");
+const info = document.getElementById("info");
+const moves = document.getElementById("moves");
+const right = document.getElementById("right");
 let index = 0;
 buttonNext.addEventListener("click", () => {
     index++;
@@ -77,3 +53,13 @@ buttonPrev.addEventListener("click", () => {
             sprite.src=data.sprites.front_default;
         });
 });
+
+info.addEventListener("click", () => {
+    info.style.backgroundColor = "#32CD32";
+    moves.style.backgroundColor = "rgb(218, 216, 216)";
+
+})
+moves.addEventListener("click", () => {
+    moves.style.backgroundColor = "#32CD32";
+    info.style.backgroundColor = "rgb(218, 216, 216)";
+})
