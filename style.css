@@ -53,6 +53,11 @@ p {
 }
 #all {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#all-info {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -71,4 +76,32 @@ span {
     background-color: rgb(218, 216, 216);
     width: 300px;
     height: 350px;
+}
+p1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+p2 {
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.types {
+    display: flex;
+    border: none;
+    background-color: rgb(218, 216, 216) ;
+    justify-content: center;
+    line-height: 100%;
+    border-radius: 10px;
+    margin-top: -5%;
+    
+}
+span1 {
+    background-color: rgb(218, 216, 216);
+    width: 70px;
+    height: 17px;
+    border-radius: 10px;
 }
